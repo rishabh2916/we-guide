@@ -1,7 +1,45 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
+import Profile from './Profile';
+import ShowRoadmap from './ShowRoadmap';
+import Card from './Card';
+import Assessment from './Assessment';
 
+
+
+
+// const WeGuide = () => {
+//   const navigate = useNavigate();
+
+//   const callUserPage = async () => {
+//     try {
+//       const res = await fetch('/user', {
+//         method: "GET",
+//         headers: {
+//           Accept: "application/json",
+//           "Content-Type": "application/json"
+//         },
+//         credentials: "include"
+//       });
+
+//       const data = await res.json();
+//       console.log(data);
+
+//       if (!res.status === 200) {
+//         const error = new Error(res.error);
+//         throw error;
+//       }
+//     } catch (err) {
+//       console.log(err);
+//       // navigate('/login')
+//     }
+//   };
+
+//   useEffect(() => {
+//     callUserPage();
+//   }, []);
 const WeGuide = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const callUserPage = async () => {
     try {
@@ -17,7 +55,7 @@ const WeGuide = () => {
       const data = await res.json();
       console.log(data);
 
-      if (!res.status === 200) {
+      if (res.status !== 200) {
         const error = new Error(res.error);
         throw error;
       }
@@ -163,7 +201,9 @@ const WeGuide = () => {
           <div className="px-6 pt-6 2xl:container">
             <ShowRoadmap />
           </div>}
-        {/* {active === "academic" &&
+
+          {/* //comment */}
+        {active === "academic" &&
                 <div className="px-6 pt-6 2xl:container">
                     <Card >
                         Academic Details
@@ -172,7 +212,7 @@ const WeGuide = () => {
             }
             {active === "assessment" &&
                 <div className="px-6 pt-6 2xl:container">
-                    <Assesment />
+                    <Assessment />
                 </div>
             }
             {active === "quiz" &&
@@ -195,7 +235,9 @@ const WeGuide = () => {
                         My Report
                     </Card>
                 </div>
-            } */}
+            }
+
+            {/* //comment */}
       </div>
     </div>
 

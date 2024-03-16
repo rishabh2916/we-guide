@@ -1,9 +1,9 @@
 import { Card } from '@material-tailwind/react';
 import React, { useEffect, useState } from 'react';
 // import { NavLink } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 // import logo from '../../assets/logo.png'
-import Community from '../components/ProVersion/Community';
+// import Community from '../components/ProVersion/Community';
 import AddBlog from '../components/ProVersion/AddBlog';// import Assesment from './Assessment/Assesment';
 import BuildCommunity from '../components/ProVersion/BuildCommunity';
 // import MyAssessment from './MyAssessment';
@@ -43,7 +43,7 @@ const ProDashboard = () => {
     const [active, setActive] = useState("profile");
     return (
         <div>
-            <aside class="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
+            <aside className="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-white transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[20%] 2xl:w-[15%]">
                 <div>
                     <div className='p-3 flex text-4xl font-bold  text-gray-600 py-1 ml-0 mt-2 rounded-full'>
                         {/* <img className="w-10" src={logo} alt="logo" /> */}
